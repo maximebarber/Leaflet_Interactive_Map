@@ -22,9 +22,27 @@
     
     <div class="container">
 
+        <br><h1>Leaflet Interactive Map</h1>
 
+        <form action="">
 
-        <h1>Leaflet Interactive Map</h1>
+            <legend>Votre département</legend>
+ 
+                <div class="form-group row">
+                    
+                    <label for="departement" class="col-sm-3 col-form-label">J'entre mon département</label>
+
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control-plaintext" id="departement">
+                    </div>
+                    
+                </div>
+            
+            <!-- TODO "Me géolocaliser" -->
+            
+            <button type="submit" class="btn btn-outline-primary">Valider</button>
+
+        </form><br>
 
         <div id="mapid"></div>
 
@@ -34,9 +52,9 @@
 <script src="Assets/js/leaflet.js"></script>
 
 <!-- Bootstrap -->
-<script src="Assets/js/bootstrap.js"></script>
 <script src="Assets/js/jquery-3.3.1.js"></script>
 <script src="Assets/js/popper.js"></script>
+<script src="Assets/js/bootstrap.min.js"></script>
 
 <!-- Call custom js after Leaflet js -->
 <script src="app.js"></script>

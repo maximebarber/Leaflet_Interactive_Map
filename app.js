@@ -387,7 +387,7 @@ var polygon_haut_rhin = L.polygon
 .addTo(mymap);
 
 // * Zoom the map to the given departement
-let departement = 68;
+let departement = 67;
 
 if (departement === 67)
 {
