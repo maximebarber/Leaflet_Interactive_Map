@@ -24,7 +24,7 @@ L.tileLayer
 .addTo(mymap);
 
 // * Initialize Zones and convert them to LAT/LNG
-var latlngs = invert_lat_lng
+var bas_rhin = invert_lat_lng
 (
     [
         // * Obernai
@@ -372,9 +372,9 @@ var haut_rhin = invert_lat_lng
 );
 
 // * Define shape and add to map with coordinates
-var polygon = L.polygon
+var polygon_bas_rhin = L.polygon
 (
-    latlngs, 
+    bas_rhin, 
     { color:'#1A237E'}
 )
 .addTo(mymap);
@@ -386,14 +386,14 @@ var polygon_haut_rhin = L.polygon
 )
 .addTo(mymap);
 
-// * Zoom the map to the polygon
-let departement = 68;
+// * Zoom the map to the given departement
+let departement = 67;
 
 if (departement === 67)
 {
     mymap.fitBounds
     (
-        polygon.getBounds()
+        polygon_bas_rhin.getBounds()
     );   
 }
 else
