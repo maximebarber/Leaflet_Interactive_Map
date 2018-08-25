@@ -19,6 +19,11 @@ input
     background: #ECEFF1 !important;
 }
 
+p
+{
+    text-align: center;
+}
+
 /* Titre */
 
 h1

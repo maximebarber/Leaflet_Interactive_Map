@@ -394,19 +394,45 @@ function getDepartement()
 
     dept = document.getElementById("dept");
 
-    if (dept.value == 67) 
+/*     if (dept.value == 67) 
     {
         mymap.fitBounds
         (
         polygon_bas_rhin.getBounds()
         );
     }
-    else 
+    else if (dept.value == 68)
     {
         mymap.fitBounds
         (
         polygon_haut_rhin.getBounds()
         );
+    } */
+
+    const errorMsg = "Département indisponible";
+    
+    switch(dept.value)
+    {
+        case '67':
+            mymap.fitBounds
+            (
+            polygon_bas_rhin.getBounds()
+            ); 
+            document.getElementById("errorMsg").innerHTML = "";
+            break;
+        case '68':
+            mymap.fitBounds
+            (
+            polygon_haut_rhin.getBounds()
+            );
+            document.getElementById("errorMsg").innerHTML = "";
+            break;
+        default:
+            mymap.fitBounds
+            (
+            polygon_bas_rhin.getBounds()
+            );
+            document.getElementById("errorMsg").innerHTML = errorMsg;
     }
 }
 
