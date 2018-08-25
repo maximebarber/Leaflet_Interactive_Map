@@ -386,8 +386,19 @@ var polygon_haut_rhin = L.polygon
 )
 .addTo(mymap);
 
+// * Get departement data from form
+
+function getDepartement() 
+{
+    let inputValue;
+
+    inputValue = document.getElementById("dept").value;
+
+    document.getElementById("demo").innerHTML = inputValue;
+}
+
 // * Zoom the map to the given departement
-let departement = 67;
+//let departement = getDepartement();
 
 if (departement === 67)
 {

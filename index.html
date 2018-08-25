@@ -22,9 +22,12 @@
     
     <div class="container">
 
-        <br><h1>Leaflet Interactive Map</h1>
+        <br><h1>Leaflet Interactive Map</h1><br>
 
-        <form action="">
+        <!-- <button onclick="getDepartement()">Try it</button> -->
+        <p id="demo"></p>
+
+        <form action="" id="departement">
 
             <legend>Votre département</legend>
  
@@ -33,14 +36,16 @@
                     <label for="departement" class="col-sm-3 col-form-label">J'entre mon département</label>
 
                     <div class="col-sm-3">
-                        <input type="text" class="form-control-plaintext" id="departement">
+
+                        <input type="number" class="form-control-plaintext" id="dept">
+
                     </div>
                     
                 </div>
             
             <!-- TODO "Me géolocaliser" -->
             
-            <button type="submit" class="btn btn-outline-primary">Valider</button>
+            <button type="button" class="btn btn-outline-primary" onclick="getDepartement()">Valider</button>
 
         </form><br>
 

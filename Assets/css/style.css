@@ -6,6 +6,15 @@
     margin: auto;
 }
 
+/* Form */
+
+input
+{
+    background: #ECEFF1 !important;
+}
+
+/* Titre */
+
 h1
 {
     text-align: center;
