@@ -8,6 +8,12 @@
 
 /* Form */
 
+form
+{
+    width: 600px;
+    margin: auto;
+}
+
 input
 {
     background: #ECEFF1 !important;

@@ -390,30 +390,30 @@ var polygon_haut_rhin = L.polygon
 
 function getDepartement() 
 {
-    let inputValue;
+    let dept;
 
-    inputValue = document.getElementById("dept").value;
+    dept = document.getElementById("dept");
 
-    document.getElementById("demo").innerHTML = inputValue;
+    if (dept.value == 67) 
+    {
+        mymap.fitBounds
+        (
+        polygon_bas_rhin.getBounds()
+        );
+    }
+    else 
+    {
+        mymap.fitBounds
+        (
+        polygon_haut_rhin.getBounds()
+        );
+    }
 }
 
 // * Zoom the map to the given departement
 //let departement = getDepartement();
 
-if (departement === 67)
-{
-    mymap.fitBounds
-    (
-        polygon_bas_rhin.getBounds()
-    );   
-}
-else
-{
-    mymap.fitBounds
-    (
-        polygon_haut_rhin.getBounds()
-    );  
-}
+
 
 // * Convert from LNG/LAT to LAT/LNG
 
