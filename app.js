@@ -601,29 +601,27 @@ var polygonColor = {color: '#1A237E'}
 
 function getDepartement() 
 {
-    let dept;
-
-    dept = document.getElementById("dept");
+    let dept = document.getElementById("dept");
 
     const errorMsg = "Département indisponible";
     
-    switch(dept.value)
+    switch(Number(dept.value))
     {
-        case '67':
+        case 67:
             mymap.fitBounds
             (
             polygon_bas_rhin.getBounds()
             ); 
             document.getElementById("errorMsg").innerHTML = "";
             break;
-        case '68':
+        case 68:
             mymap.fitBounds
             (
             polygon_haut_rhin.getBounds()
             );
             document.getElementById("errorMsg").innerHTML = "";
             break;
-        case '33':
+        case 33:
             mymap.fitBounds
             (
                 L.polygon
@@ -634,7 +632,7 @@ function getDepartement()
             );
             document.getElementById("errorMsg").innerHTML = "";
             break;
-        case '34':
+        case 34:
             mymap.fitBounds
             (
                 L.polygon
@@ -655,14 +653,26 @@ function getDepartement()
 }
 
 // * Loop getBounds
-
-for (j in france.departements)
+function getLucky()
 {
-    let dept;
-
-    dept = document.getElementById("dept");
-    console.log(france.departements[j].number);
-
+    for (j in france.departements)
+    {
+        let departementNumber = document.getElementById("departementNumber");
+        
+        if (france.departements[j].number === Number(departementNumber.value))
+        {
+            mymap.fitBounds
+            (
+                L.polygon
+                    (
+                    france.departements[j].polygons,
+                    polygonColor
+                    )
+                    .getBounds()
+            );
+        }
+        
+    }
 }
 
 // * Convert from LNG/LAT to LAT/LNG
