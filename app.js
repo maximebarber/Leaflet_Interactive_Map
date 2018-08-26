@@ -566,7 +566,7 @@ for (i in france.departements)
     coordinates += france.departements[i].polygons;
 
     // * Set polygon color
-    var polygonColor = { color: '#1A237E' }
+    var polygonColor = { color: 'red' }
     
     // * Set polygon position
     L.polygon
@@ -594,23 +594,8 @@ var polygon_haut_rhin = L.polygon
 )
 .addTo(mymap);
 
-/* var polygon_gironde = L.polygon
-(
-    zones.gironde,
-    { color: '#1A237E' }
-)
-.addTo(mymap); */
-
 // * Set polygon color
 var polygonColor = {color: '#1A237E'}
-
-// * Create polygons, set position and options and add to map
-var polygonPosition = L.polygon
-(
-    zones.gironde,
-    polygonColor
-)
-.addTo(mymap);
 
 // * Get departement data from form
 
