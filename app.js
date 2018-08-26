@@ -658,20 +658,26 @@ function getLucky()
     for (j in france.departements)
     {
         let departementNumber = document.getElementById("departementNumber");
+
+        const errorMsg = "Département indisponible";
         
-        if (france.departements[j].number === Number(departementNumber.value))
+        if (Number(departementNumber.value) === france.departements[j].number)
         {
             mymap.fitBounds
             (
                 L.polygon
-                    (
-                    france.departements[j].polygons,
-                    polygonColor
-                    )
-                    .getBounds()
+                (
+                france.departements[j].polygons,
+                polygonColor
+                )
+                .getBounds()
             );
+
+            document.getElementById("errorMsg").innerHTML = "";
+            break;
         }
-        
+        else
+            document.getElementById("errorMsg").innerHTML = "Département non disponible";
     }
 }
 
