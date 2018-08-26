@@ -626,7 +626,22 @@ function getDepartement()
         case '33':
             mymap.fitBounds
             (
-            polygon_gironde.getBounds()
+                L.polygon
+                    (
+                    france.departements[0].polygons,
+                    polygonColor
+                    ).getBounds()
+            );
+            document.getElementById("errorMsg").innerHTML = "";
+            break;
+        case '34':
+            mymap.fitBounds
+            (
+                L.polygon
+                    (
+                    france.departements[1].polygons,
+                    polygonColor
+                    ).getBounds()
             );
             document.getElementById("errorMsg").innerHTML = "";
             break;
@@ -639,10 +654,9 @@ function getDepartement()
     }
 }
 
-// * Zoom the map to the given departement
-//let departement = getDepartement();
+// * Loop getBounds
 
-
+/* for (i in france.departements) */
 
 // * Convert from LNG/LAT to LAT/LNG
 
