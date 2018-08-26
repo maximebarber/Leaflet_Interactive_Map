@@ -656,7 +656,14 @@ function getDepartement()
 
 // * Loop getBounds
 
-/* for (i in france.departements) */
+for (j in france.departements)
+{
+    let dept;
+
+    dept = document.getElementById("dept");
+    console.log(france.departements[j].number);
+
+}
 
 // * Convert from LNG/LAT to LAT/LNG
 
