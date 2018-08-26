@@ -371,6 +371,214 @@ var haut_rhin = invert_lat_lng
     ]
 );
 
+var france =
+{
+    "departements":
+    [
+        {
+            "name": "gironde",
+            "number": 33,
+            "polygons": invert_lat_lng
+            ([
+                // * Pauillac
+                [
+                    [
+                        -0.7834625244140625,
+                        45.206231026242214
+                    ],
+                    [
+                        -0.7395172119140625,
+                        45.17913284309501
+                    ],
+                    [
+                        -0.7477569580078125,
+                        45.21010114198755
+                    ]
+                ],
+                // * Bordeaux
+                [
+                    [
+                        -0.65643310546875,
+                        44.91813929958515
+                    ],
+                    [
+                        -0.71136474609375,
+                        44.86560301534198
+                    ],
+                    [
+                        -0.72784423828125,
+                        44.84418558537004
+                    ],
+                    [
+                        -0.7072448730468749,
+                        44.79645449978889
+                    ],
+                    [
+                        -0.6976318359375,
+                        44.77403648591521
+                    ],
+                    [
+                        -0.5891418457031249,
+                        44.74185630294231
+                    ],
+                    [
+                        -0.48614501953124994,
+                        44.78573392716592
+                    ],
+                    [
+                        -0.435333251953125,
+                        44.87630874326679
+                    ],
+                    [
+                        -0.4222869873046875,
+                        44.9643120983638
+                    ],
+                    [
+                        -0.4003143310546875,
+                        44.992969144596394
+                    ],
+                    [
+                        -0.4030609130859375,
+                        45.03228854011636
+                    ],
+                    [
+                        -0.427093505859375,
+                        45.03859654645257
+                    ],
+                    [
+                        -0.46348571777343744,
+                        45.03325904788863
+                    ],
+                    [
+                        -0.49850463867187494,
+                        45.01578738994143
+                    ],
+                    [
+                        -0.53558349609375,
+                        44.96917023288551
+                    ],
+                    [
+                        -0.597381591796875,
+                        44.939529212272305
+                    ],
+                    [
+                        -0.626220703125,
+                        44.93758500391091
+                    ],
+                    [
+                        -0.65643310546875,
+                        44.91813929958515
+                    ]
+                ]
+            ])
+        },
+        {        
+            "name": "herault",
+            "number": 34,
+            "polygons": invert_lat_lng
+            ([
+                // * Montpellier
+                [
+                    [
+                        3.9385986328125,
+                        43.63110543935801
+                    ],
+                    [
+                        3.8438415527343746,
+                        43.63806292753483
+                    ],
+                    [
+                        3.6639404296874996,
+                        43.574421623084234
+                    ],
+                    [
+                        3.5060119628906246,
+                        43.44494295526125
+                    ],
+                    [
+                        3.49639892578125,
+                        43.3781031842174
+                    ],
+                    [
+                        3.519744873046875,
+                        43.31918320532585
+                    ],
+                    [
+                        3.552703857421875,
+                        43.31918320532585
+                    ],
+                    [
+                        3.58978271484375,
+                        43.35014829117744
+                    ],
+                    [
+                        3.6543273925781254,
+                        43.394071624983866
+                    ],
+                    [
+                        3.690032958984375,
+                        43.393073720674415
+                    ],
+                    [
+                        3.7229919433593746,
+                        43.414026260415305
+                    ],
+                    [
+                        3.7628173828124996,
+                        43.47783692169239
+                    ],
+                    [
+                        3.8136291503906246,
+                        43.519676085239226
+                    ],
+                    [
+                        3.8507080078125004,
+                        43.51868025160499
+                    ],
+                    [
+                        3.89190673828125,
+                        43.560491112629286
+                    ],
+                    [
+                        3.9509582519531246,
+                        43.5734266934657
+                    ],
+                    [
+                        3.9797973632812496,
+                        43.58735421230633
+                    ],
+                    [
+                        3.9385986328125,
+                        43.63110543935801
+                    ]
+
+                ]
+            ])
+        }
+    ]
+}
+
+let coordinates = "";
+
+// * Loop through all the polygons and add to map
+for (i in france.departements)
+{
+    coordinates += france.departements[i].polygons;
+
+    // * Set polygon color
+    var polygonColor = { color: '#1A237E' }
+    
+    // * Set polygon position
+    L.polygon
+    (
+        france.departements[i].polygons,
+        polygonColor 
+    )
+    .addTo(mymap);
+}
+
+document.getElementById("demo").innerHTML = coordinates;
+
 // * Define shape and add to map with coordinates
 var polygon_bas_rhin = L.polygon
 (
@@ -386,6 +594,24 @@ var polygon_haut_rhin = L.polygon
 )
 .addTo(mymap);
 
+/* var polygon_gironde = L.polygon
+(
+    zones.gironde,
+    { color: '#1A237E' }
+)
+.addTo(mymap); */
+
+// * Set polygon color
+var polygonColor = {color: '#1A237E'}
+
+// * Create polygons, set position and options and add to map
+var polygonPosition = L.polygon
+(
+    zones.gironde,
+    polygonColor
+)
+.addTo(mymap);
+
 // * Get departement data from form
 
 function getDepartement() 
@@ -393,21 +619,6 @@ function getDepartement()
     let dept;
 
     dept = document.getElementById("dept");
-
-/*     if (dept.value == 67) 
-    {
-        mymap.fitBounds
-        (
-        polygon_bas_rhin.getBounds()
-        );
-    }
-    else if (dept.value == 68)
-    {
-        mymap.fitBounds
-        (
-        polygon_haut_rhin.getBounds()
-        );
-    } */
 
     const errorMsg = "Département indisponible";
     
@@ -424,6 +635,13 @@ function getDepartement()
             mymap.fitBounds
             (
             polygon_haut_rhin.getBounds()
+            );
+            document.getElementById("errorMsg").innerHTML = "";
+            break;
+        case '33':
+            mymap.fitBounds
+            (
+            polygon_gironde.getBounds()
             );
             document.getElementById("errorMsg").innerHTML = "";
             break;
