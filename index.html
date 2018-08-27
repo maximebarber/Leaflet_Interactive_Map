@@ -15,16 +15,14 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="Assets/css/style.css">
-    <title>Leaflet Interactive Map</title>
+    <title>OrniKaisse</title>
 </head>
 
 <body>
     
     <div class="container">
 
-        <br><h1>Leaflet Interactive Map</h1><br>
-
-        <p id="errorMsg"></p>
+        <br><h1>OrniKaisse</h1><br>
 
         <form action="" id="departement">
  
@@ -41,7 +39,7 @@
 
                     </div>
 
-                    <button type="button" class="btn btn-outline-primary" onclick="getLucky()">Valider</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="getDepartements()">Valider</button>
                     
                 </div>
             
@@ -49,13 +47,11 @@
 
         </form><br>
 
-        <p id="errorMsg"></p>
-
         <div id="mapid"></div>
 
-    </div>
+        <br></vr><div id="msg"></div>
 
-    <p id="demo"></p>
+    </div>
 
 <!-- Make sure you put this AFTER Leaflet's CSS -->
 <script src="Assets/js/leaflet.js"></script>

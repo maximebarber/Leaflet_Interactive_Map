@@ -373,11 +373,12 @@ var haut_rhin = invert_lat_lng
 
 var france =
 {
-    "departements":
+    "departement":
     [
         {
             "name": "gironde",
             "number": 33,
+            "heures": 125,
             "polygons": invert_lat_lng
             ([
                 // * Pauillac
@@ -475,6 +476,7 @@ var france =
         {        
             "name": "herault",
             "number": 34,
+            "heures": 98,
             "polygons": invert_lat_lng
             ([
                 // * Montpellier
@@ -554,130 +556,409 @@ var france =
 
                 ]
             ])
+        },
+        {
+            "name": "bas-rhin",
+            "number": 67,
+            "heures": 45,
+            "polygons": invert_lat_lng
+            ([
+                // * Obernai
+                [
+                    [
+                        7.46315,
+                        48.4729213
+                    ],
+                    [
+                        7.4404907,
+                        48.4556197
+                    ],
+                    [
+                        7.4521637,
+                        48.4405898
+                    ],
+                    [
+                        7.4933624,
+                        48.4351233
+                    ],
+                    [
+                        7.5180817,
+                        48.4533427
+                    ],
+                    [
+                        7.517395,
+                        48.4720108
+                    ],
+                    [
+                        7.4830627,
+                        48.4792941
+                    ],
+                    [
+                        7.4638367,
+                        48.472466
+                    ]
+                ],
+                // * Strasbourg
+                [
+                    [
+                        7.7748870849609375,
+                        48.62746280105111
+                    ],
+                    [
+                        7.719268798828125,
+                        48.63063958030254
+                    ],
+                    [
+                        7.7048492431640625,
+                        48.61929302177067
+                    ],
+                    [
+                        7.6966094970703125,
+                        48.60158729649512
+                    ],
+                    [
+                        7.6815032958984375,
+                        48.59931688270807
+                    ],
+                    [
+                        7.679443359375,
+                        48.59568400838304
+                    ],
+                    [
+                        7.680816650390624,
+                        48.587963282992845
+                    ],
+                    [
+                        7.6746368408203125,
+                        48.57342695234659
+                    ],
+                    [
+                        7.6636505126953125,
+                        48.55797752047523
+                    ],
+                    [
+                        7.658843994140625,
+                        48.5534326717307
+                    ],
+                    [
+                        7.6663970947265625,
+                        48.537977131982025
+                    ],
+                    [
+                        7.6773834228515625,
+                        48.532975799741635
+                    ],
+                    [
+                        7.682876586914063,
+                        48.518878477951446
+                    ],
+                    [
+                        7.68218994140625,
+                        48.50068258677571
+                    ],
+                    [
+                        7.680816650390624,
+                        48.48156986876895
+                    ],
+                    [
+                        7.7048492431640625,
+                        48.47610776896956
+                    ],
+                    [
+                        7.7405548095703125,
+                        48.471555569874745
+                    ],
+                    [
+                        7.7542877197265625,
+                        48.48202501720533
+                    ],
+                    [
+                        7.779006958007812,
+                        48.500227605781035
+                    ],
+                    [
+                        7.790679931640624,
+                        48.5216072980982
+                    ],
+                    [
+                        7.7954864501953125,
+                        48.545705491847464
+                    ],
+                    [
+                        7.796173095703125,
+                        48.55388717497782
+                    ],
+                    [
+                        7.769393920898437,
+                        48.60113322190171
+                    ],
+                    [
+                        7.7803802490234375,
+                        48.61202988553221
+                    ],
+                    [
+                        7.793426513671875,
+                        48.62519355056901
+                    ],
+                    [
+                        7.798919677734375,
+                        48.63563125791996
+                    ],
+                    [
+                        7.7748870849609375,
+                        48.62746280105111
+                    ]
+                ],
+                // * Molsheim 
+                [
+                    [
+                        7.476882934570312,
+                        48.552750909204676
+                    ],
+                    [
+                        7.47344970703125,
+                        48.54252336892718
+                    ],
+                    [
+                        7.467269897460937,
+                        48.53888641203577
+                    ],
+                    [
+                        7.459716796875001,
+                        48.5370678355958
+                    ],
+                    [
+                        7.465553283691407,
+                        48.53183906441962
+                    ],
+                    [
+                        7.4686431884765625,
+                        48.529792876529015
+                    ],
+                    [
+                        7.479972839355468,
+                        48.52638237963075
+                    ],
+                    [
+                        7.4871826171875,
+                        48.525700252688765
+                    ],
+                    [
+                        7.499542236328124,
+                        48.52797397343302
+                    ],
+                    [
+                        7.504348754882812,
+                        48.53252110867523
+                    ],
+                    [
+                        7.507781982421875,
+                        48.53547652761968
+                    ],
+                    [
+                        7.50812530517578,
+                        48.5402503014931
+                    ],
+                    [
+                        7.506752014160156,
+                        48.546841915833404
+                    ],
+                    [
+                        7.497138977050781,
+                        48.55116009425219
+                    ],
+                    [
+                        7.487869262695312,
+                        48.5493419587775
+                    ],
+                    [
+                        7.476882934570312,
+                        48.552750909204676
+                    ]
+                ]
+            ])
+        },
+        {
+            "name": "haut-rhin",
+            "number": 68,
+            "heures": 105,
+            "polygons": invert_lat_lng
+            ([
+                // * Mulhouse
+                [
+                    [
+                    7.311401367187499,
+                    47.78824822248784
+                    ],
+                    [
+                        7.274322509765624,
+                        47.75686775372488
+                    ],
+                    [
+                        7.252349853515625,
+                        47.75086639028423
+                    ],
+                    [
+                        7.253036499023437,
+                        47.746711194756
+                    ],
+                    [
+                        7.2544097900390625,
+                        47.74440260945156
+                    ],
+                    [
+                        7.2564697265625,
+                        47.74024689788072
+                    ],
+                    [
+                        7.260589599609374,
+                        47.73516724432785
+                    ],
+                    [
+                        7.267456054687499,
+                        47.72916337846899
+                    ],
+                    [
+                        7.2887420654296875,
+                        47.719001413201916
+                    ],
+                    [
+                        7.31964111328125,
+                        47.70791337194979
+                    ],
+                    [
+                        7.36083984375,
+                        47.70606513569572
+                    ],
+                    [
+                        7.4102783203125,
+                        47.73193447949174
+                    ],
+                    [
+                        7.4267578125,
+                        47.76702233051035
+                    ],
+                    [
+                        7.40753173828125,
+                        47.78363463526376
+                    ],
+                    [
+                        7.371826171874999,
+                        47.81499895328108
+                    ],
+                    [
+                        7.349853515625,
+                        47.80762081718071
+                    ],
+                    [
+                        7.311401367187499,
+                        47.78824822248784
+                    ]
+                ],
+                // * Colmar
+                [
+                    [
+                        7.33062744140625,
+                        48.095508859658345
+                    ],
+                    [
+                        7.3148345947265625,
+                        48.09321578710874
+                    ],
+                    [
+                        7.309341430664062,
+                        48.08495987919106
+                    ],
+                    [
+                        7.326507568359375,
+                        48.07670264591117
+                    ],
+                    [
+                        7.349853515625,
+                        48.06385542635001
+                    ],
+                    [
+                        7.353973388671875,
+                        48.05559480584614
+                    ],
+                    [
+                        7.360153198242187,
+                        48.051004999484974
+                    ],
+                    [
+                        7.3848724365234375,
+                        48.060643120324514
+                    ],
+                    [
+                        7.3821258544921875,
+                        48.095050253329354
+                    ],
+                    [
+                        7.3587799072265625,
+                        48.10513864768105
+                    ],
+                    [
+                        7.353286743164062,
+                        48.102846004623906
+                    ],
+                    [
+                        7.33062744140625,
+                        48.095508859658345
+                    ]
+                ]
+            ])
         }
     ]
 }
 
-let coordinates = "";
-
 // * Loop through all the polygons and add to map
-for (i in france.departements)
+for (i in france.departement)
 {
-    coordinates += france.departements[i].polygons;
-
-    // * Set polygon color
-    var polygonColor = { color: 'red' }
     
-    // * Set polygon position
     L.polygon
     (
-        france.departements[i].polygons,
-        polygonColor 
+        france.departement[i].polygons,
+        { color: '#1f6499' }
     )
     .addTo(mymap);
 }
 
-document.getElementById("demo").innerHTML = coordinates;
-
-// * Define shape and add to map with coordinates
-var polygon_bas_rhin = L.polygon
-(
-    bas_rhin, 
-    { color:'#1A237E'}
-)
-.addTo(mymap);
-
-var polygon_haut_rhin = L.polygon
-(
-    haut_rhin,
-    { color: '#1A237E'}
-)
-.addTo(mymap);
-
-// * Set polygon color
-var polygonColor = {color: '#1A237E'}
-
-// * Get departement data from form
-
-function getDepartement() 
+// * Loop get departement from form input
+function getDepartements()
 {
-    let dept = document.getElementById("dept");
 
-    const errorMsg = "Département indisponible";
-    
-    switch(Number(dept.value))
-    {
-        case 67:
-            mymap.fitBounds
-            (
-            polygon_bas_rhin.getBounds()
-            ); 
-            document.getElementById("errorMsg").innerHTML = "";
-            break;
-        case 68:
-            mymap.fitBounds
-            (
-            polygon_haut_rhin.getBounds()
-            );
-            document.getElementById("errorMsg").innerHTML = "";
-            break;
-        case 33:
-            mymap.fitBounds
-            (
-                L.polygon
-                    (
-                    france.departements[0].polygons,
-                    polygonColor
-                    ).getBounds()
-            );
-            document.getElementById("errorMsg").innerHTML = "";
-            break;
-        case 34:
-            mymap.fitBounds
-            (
-                L.polygon
-                    (
-                    france.departements[1].polygons,
-                    polygonColor
-                    ).getBounds()
-            );
-            document.getElementById("errorMsg").innerHTML = "";
-            break;
-        default:
-            mymap.fitBounds
-            (
-            polygon_bas_rhin.getBounds()
-            );
-            document.getElementById("errorMsg").innerHTML = errorMsg;
-    }
-}
-
-// * Loop getBounds
-function getLucky()
-{
-    for (j in france.departements)
+    for (j in france.departement)
     {
         let departementNumber = document.getElementById("departementNumber");
-
-        const errorMsg = "Département indisponible";
         
-        if (Number(departementNumber.value) === france.departements[j].number)
+        if (Number(departementNumber.value) === france.departement[j].number)
         {
             mymap.fitBounds
             (
                 L.polygon
                 (
-                france.departements[j].polygons,
-                polygonColor
+                france.departement[j].polygons
                 )
                 .getBounds()
             );
 
-            document.getElementById("errorMsg").innerHTML = "";
+            // Success message
+            document.getElementById("msg").innerHTML = '<span id="nb-heures">' + france.departement[j].heures + '</span> heures de conduite disponibles dans ce département.';
+
             break;
         }
         else
-            document.getElementById("errorMsg").innerHTML = "Département non disponible";
+        {
+            //Error message
+            document.getElementById("msg").innerHTML = '<p id="errorMsg">Département non disponible</p>';
+
+            mymap.flyTo
+            (
+                [39.148402, 13.190888],
+                10
+            );
+
+        }
     }
 }
 

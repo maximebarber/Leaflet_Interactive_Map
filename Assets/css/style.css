@@ -1,8 +1,8 @@
 /* Resize map */
 #mapid 
 { 
-    height: 600px; 
-    width: 600px;
+    height: 500px; 
+    width: 500px;
     margin: auto;
 }
 
@@ -10,7 +10,7 @@
 
 form
 {
-    width: 600px;
+    width: 500px;
     margin: auto;
 }
 
@@ -19,9 +19,16 @@ input
     background: #ECEFF1 !important;
 }
 
-p
+.btn-outline-primary 
 {
-    text-align: center;
+    color: #1f6499;
+    border-color: #1f6499;
+}
+
+.btn-outline-primary:hover 
+{
+    background-color: #1f6499;
+    border-color: #1f6499;
 }
 
 /* Titre */
@@ -30,4 +37,27 @@ h1
 {
     text-align: center;
     font-family: 'Overpass';
+    color: #1f6499;
+}
+
+/* Success/Error Message */
+
+#nb-heures
+{
+    color: #1f6499;
+    display: block;
+    font-size: 2em;
+    line-height: 1em;
+    margin: 1rem 0 .4rem
+}
+
+#msg
+{
+    text-align: center;
+    font-size: 2em;
+}
+
+#errorMsg
+{
+    color: rgb(198,40,40);
 }
