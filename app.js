@@ -6,8 +6,8 @@ L.map
 )
 .setView
 (
-    [48.5574791, 7.7475236999999995], 
-    10
+    [46.79163, 2.396167], 
+    5
 );
 
 // * Add a tile to variable mymap (mapbox)
@@ -933,7 +933,7 @@ function getDepartements()
         
         if (Number(departementNumber.value) === france.departement[j].number)
         {
-            mymap.fitBounds
+            mymap.flyToBounds
             (
                 L.polygon
                 (
@@ -950,7 +950,7 @@ function getDepartements()
         else
         {
             //Error message
-            document.getElementById("msg").innerHTML = '<p id="errorMsg">Département non disponible</p>';
+            document.getElementById("msg").innerHTML = '<p id="errorMsg">Plouf ! Département non disponible</p>';
 
             mymap.flyTo
             (
@@ -960,6 +960,29 @@ function getDepartements()
 
         }
     }
+}
+
+// * Get geolocation
+
+function getLocation() 
+{
+
+    if (navigator.geolocation) 
+    {
+        navigator.geolocation.getCurrentPosition(success);
+
+        function success(position)
+        {
+            mymap.flyTo
+            (
+                [position.coords.latitude, position.coords.longitude],
+                10
+            );
+
+            console.log(position.coords.latitude)
+        }
+    }
+
 }
 
 // * Convert from LNG/LAT to LAT/LNG

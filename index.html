@@ -15,20 +15,20 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="Assets/css/style.css">
-    <title>OrniKaisse</title>
+    <title>Map interactive</title>
 </head>
 
 <body>
     
     <div class="container">
 
-        <br><h1>OrniKaisse</h1><br>
+        <br><h1>Map interactive</h1><br>
 
         <form action="" id="departement">
  
                 <div class="form-group row">
                     
-                    <label for="departement" class="col-sm-5 col-form-label">J'entre mon département</label>
+                    <label for="departement" class="col-sm-12 col-form-label">J'entre mon département (uniquement 33, 34, 67, 68)</label>
 
                 </div>
                 <div class="form-group row">
@@ -40,7 +40,19 @@
                     </div>
 
                     <button type="button" class="btn btn-outline-primary" onclick="getDepartements()">Valider</button>
+
                     
+                </div>
+
+                <div class="form-group row">
+                    
+                    <label for="departement" class="col-sm-12 col-form-label">Je me géo-localise</label>
+
+                </div>
+                <div class="form-group row">
+
+                    <button type="button" class="btn btn-outline-primary" onclick="getLocation()">Me localiser</button>
+                   
                 </div>
             
             <!-- TODO "Me géolocaliser" -->
