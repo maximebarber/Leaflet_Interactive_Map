@@ -33,6 +33,7 @@ var france =
             "name": "gironde",
             "number": 33,
             "heures": 125,
+            "instructors": ["Jean-Marcel", "Marie-Claire", "Vincent"],
             "polygons": invert_lat_lng
             ([
                 // * Pauillac
@@ -597,7 +598,7 @@ function getDepartements()
             );
 
             // Success message
-            document.getElementById("msg").innerHTML = '<span id="nb-heures">' + france.departement[j].heures + '</span> heures de conduite disponibles dans ce département.';
+            document.getElementById("msg").innerHTML = '<span id="nb-heures">' + france.departement[j].heures + '</span> heures de conduite disponibles dans ce département avec ' + france.departement[j].instructors.length + ' formateurs.';
 
             break;
         }
@@ -614,6 +615,11 @@ function getDepartements()
 
         }
     }
+}
+
+function getFormateurs()
+{
+    console.log(france.departement);
 }
 
 // * Get geolocation
