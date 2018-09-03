@@ -28,13 +28,19 @@ input
 {
     color: #1f6499;
     border-color: #1f6499;
-    margin-left: 15px !important;
 }
 
 .btn-outline-primary:hover 
 {
     background-color: #1f6499;
     border-color: #1f6499;
+}
+
+#sign-up-btn
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
 /* Titre */
