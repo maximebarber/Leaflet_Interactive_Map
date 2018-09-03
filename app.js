@@ -132,6 +132,7 @@ var france =
             "name": "herault",
             "number": 34,
             "heures": 98,
+            "instructors": ["Jean-Phillipe", "Marie-Henri", "Laura", "Louise", "Jacques"],
             "polygons": invert_lat_lng
             ([
                 // * Montpellier
@@ -216,6 +217,7 @@ var france =
             "name": "bas-rhin",
             "number": 67,
             "heures": 45,
+            "instructors": ["Marie-Henri", "Laura", "Louise", "Jacques"],
             "polygons": invert_lat_lng
             ([
                 // * Obernai
@@ -437,6 +439,7 @@ var france =
             "name": "haut-rhin",
             "number": 68,
             "heures": 105,
+            "instructors": ["Jean-Phillipe", "Marie-Henri", "Laura", "Louise", "Jacques", "Louis", "Maxime"],
             "polygons": invert_lat_lng
             ([
                 // * Mulhouse
@@ -578,6 +581,16 @@ for (i in france.departement)
     .addTo(mymap);
 }
 
+// * Loop through the names of the instructors
+function getInstructors()
+{
+    for (l in france.departement[j].instructors) 
+    {
+        var instructor = france.departement[j].instructors[l];
+        document.getElementById("msg").innerHTML += '<p>' + instructor + '</p>'
+    }
+}
+
 // * Loop get departement from form input
 function getDepartements()
 {
@@ -598,7 +611,10 @@ function getDepartements()
             );
 
             // Success message
-            document.getElementById("msg").innerHTML = '<span id="nb-heures">' + france.departement[j].heures + '</span> heures de conduite disponibles dans ce département avec ' + france.departement[j].instructors.length + ' formateurs.';
+            document.getElementById("msg").innerHTML = '<span id="nb-heures">' + france.departement[j].heures + '</span> heures de conduite disponibles dans ce département avec ' + france.departement[j].instructors.length + ' formateurs :'
+
+            //Loop through the names of the instructors
+            getInstructors();
 
             break;
         }
@@ -616,23 +632,6 @@ function getDepartements()
         }
     }
 }
-
-// * Loop through the names of the instructors
-for (k in france.departement) 
-{
-    for (l in france.departement[k].instructors)
-    {
-        console.log(france.departement[k].instructors[l]);
-    }
-}
-
-/* function getFormateurs()
-{
-    for (k in france.departement)
-    {
-        console.log(france.departement[k].instructors);
-    }
-} */
 
 // * Get geolocation
 
