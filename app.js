@@ -617,10 +617,22 @@ function getDepartements()
     }
 }
 
-function getFormateurs()
+// * Loop through the names of the instructors
+for (k in france.departement) 
 {
-    console.log(france.departement);
+    for (l in france.departement[k].instructors)
+    {
+        console.log(france.departement[k].instructors[l]);
+    }
 }
+
+/* function getFormateurs()
+{
+    for (k in france.departement)
+    {
+        console.log(france.departement[k].instructors);
+    }
+} */
 
 // * Get geolocation
 
