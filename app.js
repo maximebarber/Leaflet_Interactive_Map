@@ -1,3 +1,5 @@
+// Tool to draw polygons: https://www.keene.edu/campus/maps/tool/
+
 // * Set initial map view
 var mymap = 
 L.map
